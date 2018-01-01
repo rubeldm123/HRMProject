@@ -119,6 +119,7 @@ public class StepForLocation {
 	public void click_On_Save_Button() throws Throwable {
 		AddLocation l= new AddLocation(driver);
 		l.Click_Save().click();
+		 System.out.println("You have Successfully Add Location");
 	  
 	}
 

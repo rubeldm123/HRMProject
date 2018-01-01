@@ -64,12 +64,12 @@ public class SearchDirectoryPF {
 	}
 	//selec jobtitel
 	public void JobTitel() {
-		Select v=new Select(driver.findElement(By.xpath("//*[@id=\"searchDirectory_job_title\"]")));
+		Select v=new Select(driver.findElement(By.xpath("//*[@id='searchDirectory_job_title']")));
 		v.selectByVisibleText("Sales Manager");
 		}
 	//select location
 	public void SelectLocation() {
-		Select v=new Select(driver.findElement(By.xpath("//*[@id=\"searchDirectory_location\"]")));
+		Select v=new Select(driver.findElement(By.xpath("//*[@id='searchDirectory_location']")));
 		v.selectByVisibleText("    New York Sales Office");
 		}
 	
@@ -80,7 +80,7 @@ public class SearchDirectoryPF {
 	public WebElement ClickSearch() {
 		return E_searc;
 	}
-	@FindBy(how=How.XPATH, using ="//*[@id=\"content\"]/div[2]/div[2]")
+	@FindBy(how=How.XPATH, using ="//*[@id='content']/div[2]/div[2]")
 	@CacheLookup
 	WebElement Error;
 	public WebElement ErrorMessage() {
@@ -88,13 +88,13 @@ public class SearchDirectoryPF {
 		String ActualError=Error.getText();
 		String ExpectedError="  Records Found";
 		
-		if (ActualError.equals(ExpectedError)) {
+		/*if (ActualError.equals(ExpectedError)) {
 			System.out.println("your test is Fail As Expected");
 			driver.close();
 		}
 		else {
 			driver.quit();
-		}
+		}*/
 		
 	Assert.assertEquals(ActualError, ExpectedError);
 	

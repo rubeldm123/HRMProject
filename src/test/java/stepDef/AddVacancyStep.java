@@ -134,6 +134,7 @@ public class AddVacancyStep {
 	public void cick_on_Save_Button() throws Throwable {
 		 AddVacancyFactor a=new AddVacancyFactor(driver);
 		 a.ClickSave().click();
+		 System.out.println("You have Successfully Add Vacancy");
 	
 		
 	}

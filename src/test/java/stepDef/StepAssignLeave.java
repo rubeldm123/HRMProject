@@ -76,6 +76,7 @@ public class StepAssignLeave {
 		
 		AssignLeavePF a= new AssignLeavePF(driver);
 		a.ClickOnOK().click();
+		 System.out.println("You have Successfully AssignLeave");
 	}	
 		@Then("^close driver$")
 		public void close_driver() throws Throwable {

@@ -166,7 +166,7 @@ WebDriver driver;//diclar driver
 		
 		String ActualError=Error.getText();
 		String ExpectedError= "Required";
-		
+		/*
 		if (ActualError.equals(ExpectedError)) {
 			System.out.println("pass test");
 		}
@@ -174,6 +174,7 @@ WebDriver driver;//diclar driver
 			System.out.println("Your Test Fail");
 			driver.quit();
 		}
+		*/
 			Assert.assertEquals(ActualError, ExpectedError);
 		return Error;
 		}

@@ -135,13 +135,13 @@ public WebElement Errorlist() {
 	String ActualError=cl.getText();
 	System.out.println("ActualError is :" + ActualError );
 	String ExpectedError= "Required";
-	if (ActualError.equals(ExpectedError)) {
+	/*if (ActualError.equals(ExpectedError)) {
 		System.out.println("your test is Fail As Expected");
 		driver.close();
 	}
 	else {
 		driver.quit();
-	}
+	}*/
 	
 Assert.assertEquals( ActualError,ExpectedError );
 

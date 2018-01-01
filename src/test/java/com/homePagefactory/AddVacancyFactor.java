@@ -137,7 +137,7 @@ public class AddVacancyFactor {
 							
 							String Act=el.getText();
 							String Exp= "Invalid";
-							if (Act.equals(Exp)) {
+							/*if (Act.equals(Exp)) {
 								System.out.println("pass test");
 							}
 							else {
@@ -145,7 +145,7 @@ public class AddVacancyFactor {
 								driver.quit();
 							}
 								Assert.assertEquals(Act, Exp);
-							
+							*/
 						Assert.assertEquals(Act,Exp);
 						
 							
