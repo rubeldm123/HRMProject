@@ -116,14 +116,14 @@ public WebElement ClickOnOK() {
 	return c;
 }
 //Error message
-@FindBy(how=How.XPATH, using ="//*[@id='assignleave_txtEmployee_empName']")
+@FindBy(how=How.XPATH, using ="//*[@id='welcome']")
 @CacheLookup
 WebElement cl;
 public WebElement Errorlist() {
 	
 	String ActualError=cl.getText();
 	System.out.println("ActualError is :" + ActualError );
-	String ExpectedError= "Required";
+	String ExpectedError= "Welcome Admin";
 	/*if (ActualError.equals(ExpectedError)) {
 		System.out.println("your test is Fail As Expected");
 		driver.close();

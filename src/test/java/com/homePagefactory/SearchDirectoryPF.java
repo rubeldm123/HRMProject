@@ -86,7 +86,7 @@ public class SearchDirectoryPF {
 	public WebElement ErrorMessage() {
 		
 		String ActualError=Error.getText();
-		String ExpectedError="  Records Found";
+		String ExpectedError="No Records Found";
 		
 		/*if (ActualError.equals(ExpectedError)) {
 			System.out.println("your test is Fail As Expected");
