@@ -160,20 +160,20 @@ WebDriver driver;//diclar driver
 		}
 		
 		//Error message
-		@FindBy(how=How.XPATH, using ="//*[@id=\"frmAddEmp\"]/fieldset/ol/li[1]/ol/li[1]/span")
+		@FindBy(how=How.XPATH, using ="//*[@id='frmAddEmp']/fieldset/ol/li[1]/ol/li[1]/span")
 		@CacheLookup
 		WebElement cl;
 		public WebElement HardAssert() {
 			
 			String ActualError=cl.getText();
 			String ExpectedError= "Required";
-			if (ActualError.equals(ExpectedError)) {
+			/*if (ActualError.equals(ExpectedError)) {
 				System.out.println("your test is Fail As Expected");
 				driver.close();
 			}
 			else {
 				driver.quit();
-			}
+			}*/
 			
 		Assert.assertEquals(ActualError, ExpectedError);
 			

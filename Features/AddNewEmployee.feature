@@ -1,4 +1,3 @@
-@NewEmployee
 Feature: Add employee
 In order to Add a new Employee
 as a admin
@@ -26,7 +25,7 @@ Then Browser Will close
 Examples:
 |FirstName|MiddleName|LastName|EmployeeId|UserName|password|confirmPasswor|
 |md       |MO         |Rubel   |0078      |rubeldm|password|password      |
-
+@NewEmployee
 Scenario Outline: Negative-Admin Unable to add new Employee
 Given  Admin navigate to Admin HomePage
 When Admin click on PIM link
