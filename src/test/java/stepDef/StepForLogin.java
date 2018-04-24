@@ -1,8 +1,17 @@
 package stepDef;
 
+import static org.testng.Assert.assertEquals;
+
+import java.io.File;
+import java.io.IOException;
+import org.apache.commons.io.FileUtils;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -20,65 +29,73 @@ public class StepForLogin {
 	
 @Given("^Admin Navigate to HRM Login page$")
 	public void admin_Navigate_to_HRM_Login_page() throws Throwable {
-
+	System.setProperty("webdriver.chrome.driver", "/Users/mdrubel/Desktop/chromedriver" );
+	driver=new ChromeDriver();
+	driver.manage().window().maximize();
 	
+	driver.get("http://opensource.demo.orangehrmlive.com/");
+	}
 
-    //BrowserFactory.initializeBrowser("chrome", "http://opensource.demo.orangehrmlive.com/");
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\rubeldm\\Documents\\workspace_driver\\chromedriver2.33.exe" );
-		driver=new ChromeDriver();
-		driver.manage().window().maximize();
-		
-		driver.get("http://opensource.demo.orangehrmlive.com/");
- 
-    
-	}
+
+@When("^Admin Enter valid userName and password$")
+public void admin_Enter_valid_userName_and_password() throws Throwable {
 	
-	@When("^Admin Enter valid \"([^\"]*)\" and \"([^\"]*)\"$")
-	public void admin_Enter_valid_and(String un, String pw) throws Throwable {
-		LoginHomeFactory l= new LoginHomeFactory(driver);
-		l.EnterUserName().sendKeys(un);
-		l.EnterPassword().sendKeys(pw);
-	}
+	driver.findElement(By.xpath("//*[@id=\"txtUsername\"]")).sendKeys("Admin");
+	driver.findElement(By.xpath("//*[@id=\"txtPassword\"]")).sendKeys("admin");
+	
+}
+
 
 	@When("^click on LOGIN Button$")
 	public void click_on_LOGIN_Button() throws Throwable {
-		LoginHomeFactory l=new LoginHomeFactory(driver);
-		l.ClickLogin().click();
-		 System.out.println("You have Successfully Login");
+		driver.findElement(By.xpath("//*[@id=\"btnLogin\"]")).click();
 		
-	 
 	}
 
 	@Then("^Admin will Land in Admin HomePage$")
 	public void admin_will_Land_in_Admin_HomePage() throws Throwable {
-		String titel=driver.getTitle();
-		System.out.println("Welcome to " + titel + " page!");
-	  
+		Assert.assertEquals(driver.getCurrentUrl(), "http://opensource.demo.orangehrmlive.com/index.php/dashboard");
+		String actualURL= driver.getCurrentUrl();
+		
 	}
 
 	@Then("^Close The Browser$")
 	public void close_The_Browser() throws Throwable {
-		driver.close();
+	driver.close();
 	
 	}
 
-	@When("^Admin Enter invalid \"([^\"]*)\" and \"([^\"]*)\" and click Login$")
-	public void admin_Enter_invalid_and_and_click_Login(String wun, String wpw) throws Throwable {
-		LoginHomeFactory l= new LoginHomeFactory(driver);
-		l.EnterUserName().sendKeys(wun);
-		l.EnterPassword().sendKeys(wpw);
-		l.ClickLogin().click();
+	
+	@When("^Admin Enter invalid userName and Invalidpassword$")
+	public void admin_Enter_invalid_userName_and_Invalidpassword() throws Throwable {
+		driver.findElement(By.xpath("//*[@id=\"txtUsername\"]")).sendKeys("Admaswqin");
+		driver.findElement(By.xpath("//*[@id=\"txtPassword\"]")).sendKeys("admsq	sqin");	
 	  
 	}
 
+	@When("^click Login$")
+	public void click_Login() throws Throwable {
+		driver.findElement(By.xpath("//*[@id=\"btnLogin\"]")).click();
+	  
+	}
+
+
 	@Then("^Error message Dispaly$")
 	public void error_message_Dispaly() throws Throwable {
-		LoginHomeFactory l= new LoginHomeFactory(driver);
-		l.ErrorMessage();
-		System.out.println("Your You Test is faild as expected ");
+		
+		//ScreenShot
+		File src=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		try {
+			FileUtils.copyFile(src, new File("/Users/mdrubel/git/HRMProject/ScreenShot/error.png"));
+		}
+		catch(IOException e) {
+			System.out.println(e.getMessage());
+		}
 		
 		
-	  
+		Assert.assertEquals(driver.getCurrentUrl(), "http://opensource.demo.orangehrmlive.com/index.php/auth/validateCredentials");
+		String actualURL= driver.getCurrentUrl();
+		System.out.println("Actual URL for This page is :" +actualURL);
 	}
 	
 

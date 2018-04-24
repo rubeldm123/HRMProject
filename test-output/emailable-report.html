@@ -8,71 +8,11 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="7">Suite1</th></tr>
-<tr><td><a href="#t0">Nopackage</a></td><td class="num">6</td><td class="num">0</td><td class="num attn">4</td><td class="num">249,945</td><td></td><td></td></tr>
+<tr><th colspan="7">Default suite</th></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">12,826</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite1</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Nopackage &#8212; failed</th></tr><tr class="failedeven"><td rowspan="4">com.testngrunner.TestRunnerTestNG$TestRunner</td><td><a href="#m0">feature</a></td><td rowspan="4">1514492622375</td><td rowspan="4">25651</td></tr><tr class="failedeven"><td><a href="#m1">feature</a></td></tr><tr class="failedeven"><td><a href="#m2">feature</a></td></tr><tr class="failedeven"><td><a href="#m3">feature</a></td></tr><tr><th colspan="4">Nopackage &#8212; passed</th></tr><tr class="passedeven"><td rowspan="6">com.testngrunner.TestRunnerTestNG$TestRunner</td><td><a href="#m4">feature</a></td><td rowspan="6">1514492676432</td><td rowspan="6">24903</td></tr><tr class="passedeven"><td><a href="#m5">feature</a></td></tr><tr class="passedeven"><td><a href="#m6">feature</a></td></tr><tr class="passedeven"><td><a href="#m7">feature</a></td></tr><tr class="passedeven"><td><a href="#m8">feature</a></td></tr><tr class="passedeven"><td><a href="#m9">feature</a></td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.testngrunner.TestRunner</td><td><a href="#m0">feature</a></td><td rowspan="1">1524512877129</td><td rowspan="1">12157</td></tr></tbody>
 </table>
-<h2>Nopackage</h2><h3 id="m0">com.testngrunner.TestRunnerTestNG$TestRunner#feature</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>Add Job Titel</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">cucumber.runtime.CucumberException: java.lang.AssertionError: expected [Requires] but found [Required]
-	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
-	at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
-Caused by: java.lang.AssertionError: expected [Requires] but found [Required]
-	at com.homePagefactory.AddJobTitelPF.Errorlist(AddJobTitelPF.java:146)
-	at stepDef.StepForAddJobTitel.error_Message_will_display(StepForAddJobTitel.java:99)
-	at ✽.Then Error Message will display(AddJobTitel.feature:32)
-... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.testngrunner.TestRunnerTestNG$TestRunner#feature</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>Assign Leave</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">cucumber.runtime.CucumberException: java.lang.AssertionError: expected [Required] but found []
-	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
-	at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
-Caused by: java.lang.AssertionError: expected [Required] but found []
-	at com.homePagefactory.AssignLeavePF.Errorlist(AssignLeavePF.java:135)
-	at stepDef.StepAssignLeave.error_message_will_display_and_fail_test(StepAssignLeave.java:98)
-	at ✽.Then Error  message will display and fail test(AssignLeave.feature:33)
-... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.testngrunner.TestRunnerTestNG$TestRunner#feature</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>Add employee</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">cucumber.runtime.CucumberException: org.openqa.selenium.NoSuchSessionException: no such session
-  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-Build info: version: &apos;3.8.1&apos;, revision: &apos;6e95a6684b&apos;, time: &apos;2017-12-01T18:33:54.468Z&apos;
-System info: host: &apos;RUBEL&apos;, ip: &apos;169.254.204.191&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_151&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptSslCerts: true, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.33.506120 (e3e53437346286..., userDataDir: C:\Users\rubeldm\AppData\Lo...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 63.0.3239.84, webStorageEnabled: true}
-Session ID: e30540f320d77b11596a772ca79f6b8a
-	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
-	at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
-Caused by: org.openqa.selenium.NoSuchSessionException: no such session
-  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-Build info: version: &apos;3.8.1&apos;, revision: &apos;6e95a6684b&apos;, time: &apos;2017-12-01T18:33:54.468Z&apos;
-System info: host: &apos;RUBEL&apos;, ip: &apos;169.254.204.191&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_151&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptSslCerts: true, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.33.506120 (e3e53437346286..., userDataDir: C:\Users\rubeldm\AppData\Lo...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 63.0.3239.84, webStorageEnabled: true}
-Session ID: e30540f320d77b11596a772ca79f6b8a
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:658)
-	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:487)
-	at stepDef.StepForAddNewEmploy.browser_Will_close(StepForAddNewEmploy.java:129)
-	at ✽.Then Browser Will close(AddNewEmployee.feature:46)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">com.testngrunner.TestRunnerTestNG$TestRunner#feature</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>Search Employee</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">cucumber.runtime.CucumberException: java.lang.AssertionError: expected [  Records Found] but found [No Records Found]
-	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
-	at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
-Caused by: java.lang.AssertionError: expected [  Records Found] but found [No Records Found]
-	at com.homePagefactory.SearchDirectoryPF.ErrorMessage(SearchDirectoryPF.java:99)
-	at stepDef.StepSearchDirectory.no_Record_found_Message_Will_display(StepSearchDirectory.java:86)
-	at ✽.Then No Record found Message Will display(SearchDirectory.feature:30)
-... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">com.testngrunner.TestRunnerTestNG$TestRunner#feature</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>Adding NewAdmin</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">com.testngrunner.TestRunnerTestNG$TestRunner#feature</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>Admin Login to HRM home page</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">com.testngrunner.TestRunnerTestNG$TestRunner#feature</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>Add Location</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">com.testngrunner.TestRunnerTestNG$TestRunner#feature</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>AddNewVacancy</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m8">com.testngrunner.TestRunnerTestNG$TestRunner#feature</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>add candidate</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m9">com.testngrunner.TestRunnerTestNG$TestRunner#feature</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>Logout from OrgHrm Application</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Default test</h2><h3 id="m0">com.testngrunner.TestRunner#feature</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>Admin Login to HRM home page</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

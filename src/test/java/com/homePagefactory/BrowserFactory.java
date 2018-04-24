@@ -13,7 +13,7 @@ public class BrowserFactory {
 	
 	
 	public  WebDriver initializeBrowser(String browserName, String url) {
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\rubeldm\\Documents\\workspace_driver\\chromedriver2.33.exe" );
+		System.setProperty("webdriver.chrome.driver", "/Users/mdrubel/Desktop/chromedriver" );
 		if (browserName.equalsIgnoreCase("chrome")) {
 			driver=new ChromeDriver();
 		}

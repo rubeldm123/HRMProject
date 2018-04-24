@@ -3,13 +3,13 @@
 <suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Suite1]">
   <test name="Nopackage(failed)">
     <classes>
-      <class name="com.testngrunner.TestRunnerTestNG$TestRunner">
+      <class name="com.testngrunner.TestRunner">
         <methods>
           <include name="setUpClass"/>
-          <include name="feature" invocation-numbers="1 4 6 7"/>
+          <include name="feature" invocation-numbers="0"/>
           <include name="tearDownClass"/>
         </methods>
-      </class> <!-- com.testngrunner.TestRunnerTestNG$TestRunner -->
+      </class> <!-- com.testngrunner.TestRunner -->
     </classes>
   </test> <!-- Nopackage(failed) -->
 </suite> <!-- Failed suite [Suite1] -->
